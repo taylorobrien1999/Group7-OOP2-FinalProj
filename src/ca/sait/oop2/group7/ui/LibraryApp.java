@@ -6,7 +6,7 @@ public class LibraryApp {
 		System.out.println("Library Management System starting...");
 		
 		
-		// TODO: This will later show menu and call Library Service methods
+		// TODO: This will later show CLI menu and call Library Service methods
 
 	}
 
