@@ -28,6 +28,10 @@ In this project we have created a console-based Library Management System built 
 This system supports managing of library members, books, and loans, including borrowing and returning books.
 Validation rules such as preventing duplicate active loans, member deletion during an active loan, are in place.
 
+Problem Statement
+
+// to be added....
+
 Features
 
 - CRUD operations for Members and Books
