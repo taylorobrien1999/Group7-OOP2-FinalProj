@@ -45,4 +45,64 @@ public class MemberDao {
 
 	        return list;
 	    }
+	
+	public Member findById(int memberId) {
+	    String sql = "SELECT id, name, email FROM members WHERE id = ?";
+
+	    try (Connection conn = DatabaseConnection.getConnection();
+	         PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+	        stmt.setInt(1, memberId);
+
+	        try (ResultSet rs = stmt.executeQuery()) {
+	            if (rs.next()) {
+	                int id = rs.getInt("id");
+	                String name = rs.getString("name");
+	                String email = rs.getString("email");
+	                return new Member(id, name, email);
+	            }
+	        }
+
+	    } catch (SQLException e) {
+	        System.out.println("Error finding member by id:");
+	        e.printStackTrace();
+	    }
+
+	    return null;
+	}
+	
+	public boolean updateEmail(int memberId, String newEmail) {
+	    String sql = "UPDATE members SET email = ? WHERE id = ?";
+
+	    try (Connection conn = DatabaseConnection.getConnection();
+	         PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+	        stmt.setString(1, newEmail);
+	        stmt.setInt(2, memberId);
+
+	        return stmt.executeUpdate() > 0;
+
+	    } catch (SQLException e) {
+	        System.out.println("Error updating member:");
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+
+	public boolean deleteById(int memberId) {
+	    String sql = "DELETE FROM members WHERE id = ?";
+
+	    try (Connection conn = DatabaseConnection.getConnection();
+	         PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+	        stmt.setInt(1, memberId);
+	        return stmt.executeUpdate() > 0;
+
+	    } catch (SQLException e) {
+	        System.out.println("Error deleting member:");
+	        e.printStackTrace();
+	        return false;
+	    }
+	}
+	
 }
