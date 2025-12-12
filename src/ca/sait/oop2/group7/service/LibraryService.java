@@ -1,6 +1,7 @@
 package ca.sait.oop2.group7.service;
 
 import java.util.List;
+import ca.sait.oop2.group7.dao.MemberDao;
 import ca.sait.oop2.group7.model.Book;
 import ca.sait.oop2.group7.model.Member;
 import ca.sait.oop2.group7.model.Loan;
@@ -8,19 +9,19 @@ import ca.sait.oop2.group7.exceptions.LibraryException;
 
 public class LibraryService {
 	
-	// to do: add MemberDao, BookDao, LoanDao here
+	private MemberDao memberDao;
+	//TODO: later ***
 	
 	public LibraryService() {
-		//to do
+		this.memberDao = new MemberDao();
 	}
 	
 	public void addMember(Member member) {
-		//to do 
+		memberDao.insert(member);
 	}
 	
 	public List<Member> getAllMembers() {
-		// todo
-		return null;
+		return memberDao.findAll();
 	}
 	
 	public void addBook(Book book) {
