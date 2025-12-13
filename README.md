@@ -1,18 +1,6 @@
 # Group7-OOP2-FinalProj
 
 
-CRUD = DONE
-
-DATABASE CONNECTION = DONE
-
-EXCEPTION HANDLING = DONE
-
-CLI MENU = DONE
-
-
-// an early first draft of readMe 
-
-
 Final Project
 
 Group 7:
@@ -24,13 +12,16 @@ Group 7:
 
 Description
 
-In this project we have created a console-based Library Management System built in Java with a MYSQL Database.
+In this project we have created a console-based Library Management System built in Java with a MySQL Database.
 This system supports managing of library members, books, and loans, including borrowing and returning books.
 Validation rules such as preventing duplicate active loans, member deletion during an active loan, are in place.
 
 Problem Statement
 
-// to be added....
+Libraries and book stores need a reliable service to assist in managing members, books, and loans without losing track of loan records.
+When this is handled without validation, issues can occur such as the same book being loaned multiple times, members being deleted while still having an active loan, etc. This system addresses these problems by storing all library data in a connected database, books can only
+be borrowed when available, loan records are preserved, and members cannot be removed while still having an active loan.
+
 
 Features
 
