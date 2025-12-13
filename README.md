@@ -17,7 +17,7 @@ Final Project
 
 Group 7:
 - Taylor O'Brien [000968002]
-- Alexander Pacunayen [x]
+- Alexander Pacunayen [000581893]
 - Raphael Carriere [x]
 - Alexander Dea [000966563]
 
