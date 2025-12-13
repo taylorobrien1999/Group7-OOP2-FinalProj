@@ -19,7 +19,7 @@ Group 7:
 - Taylor O'Brien [000968002]
 - Alexander Pacunayen [x]
 - Raphael Carriere [x]
-- Alexander Dea [x]
+- Alexander Dea [000966563]
 
 
 Description
